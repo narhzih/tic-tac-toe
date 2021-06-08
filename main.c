@@ -19,7 +19,7 @@ int main() {
         displayBoard(board);
         player = i%2 + 1;
         do {
-            printf("\n Player %d please select the square number to insert your %c: ",
+            printf("\n \x1B[34mPlayer %d please select the square number to insert your %c:\033[0m ",
                    player, (player==1)? 'X': 'O');
             scanf("%d", &choice);
 
@@ -41,9 +41,9 @@ int main() {
 
     displayBoard(board);
     if (winner == 0)
-        printf("The game is a tie, how boring??");
+        printf("\x1B[31mThe game is a tie, how boring??\033[0m");
     else
-        printf("\n Congratulations player %d, YOU'RE THE WINNER!!!", winner);
+        printf("\n \x1B[33mCongratulations player %d, YOU'RE THE WINNER!!!\033[0m ", winner);
 
 
     return 0;
